@@ -1,6 +1,6 @@
 #   Presentation Projet
 
-<img src="recources/images/haveesp32.jpg" alt="esp32" width="100" align="left" />
+<img src="images/haveesp32.jpg" alt="esp32" width="100" align="left" />
 
 <p align="right">
 Ce projet etant un projet de **terminale STI2D** contiendra des elements et des pieces electroniques. <br>
