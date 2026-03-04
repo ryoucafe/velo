@@ -1,7 +1,11 @@
-# PRESENTATION:
+#   Presentation Projet
 
->Ce projet etant un projet de terminale STI2D contiendra des elements et des pieces electroniques telle que une [carte arduino](https://www.arduino.cc/) ou une [esp32](https://www.espressif.com/en/products/socs/esp32), dans ce projet nous utiliseront une esp32 pour son integration wifi et bluetooth.
+<img src="recources/images/haveesp32.jpg" alt="esp32" width="100" align="left" />
 
-![esp32](recources/images/haveesp32.jpg)
+<p align="right">
+Ce projet etant un projet de **terminale STI2D** contiendra des elements et des pieces electroniques. <br>
+Ici, une <a href="https://fr.wikipedia.org/wiki/ESP32">ESP32</a> sera utilisée pour ses intégrations wifi et bluetooth.
+</p>
+<br>
 
----
+# Composants
