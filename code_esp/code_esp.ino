@@ -1,43 +1,40 @@
+
+//calling libraries
+#include <Keypad.h>
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+
 #include <Servo.h>
 
+//defining pins
+#define codeBtn 10
+
+//special parameters
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-int bouton = 2;
-byte colonne = 0;
-Servo servoMotor;
+Servo motor;
 
 void setup() {
-  //I2C et bouton
-  pinMode(bouton, INPUT_PULLUP);
+  //input definitions
+  pinMode(codeBtn, INPUT_PULLUP);
 
-  lcd.init();  // initialize the lcd
+  //screen setup
+  lcd.clear();
   lcd.init();
-  // Print a message to the LCD.
   lcd.backlight();
-  lcd.setCursor(2, 0);
-  lcd.print("Saisir code:");
-  //Servomoteur
-  servoMotor.attach(10); // Indiquez la broche à laquelle le servo est connecté (ici : broche 10)
-  Wire.begin();    
-    Serial.begin(9600);
+  lcd.print("Code: ");
+  lcd.setCursor(7, 0);
+
+  //servomotor setup
+  motor.attach(11);
+
+  //serial setup
+  Serial.begin(9600);
+
+  //random setup
+  randomSeed(analogRead(0));
 }
 
 void loop() {
-  //I2C et bouton
-  if (digitalRead(bouton) == LOW) {
-    lcd.setCursor(colonne, 1);
-    lcd.print("1");
-    colonne++;
-    delay(300);
-  }
-  //Servomoteur
-    if (digitalRead(bouton) == LOW) {
-      servoMotor.write(90); // Envoyez le servo à la position de 90 degré
-      delay(300);
-    }
-    else {
-      servoMotor.write(0); // Envoyez le servo à la position de 0 degré
-    }
-  
+  passwordGen();
 }
