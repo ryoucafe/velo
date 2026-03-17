@@ -10,9 +10,30 @@
 //defining pins
 #define codeBtn 10
 
+
 //special parameters
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo motor;
+
+//keypad settings
+
+const byte ROWS = 4;
+const byte COLS = 3;
+char keys[ROWS][COLS] = {
+    {'1','2','3'},
+    {'4','5','6'},
+    {'7','8','9'},
+    {'*','0','#'}
+};
+
+byte rowPins[ROWS] = {5, 4, 3, 2}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {6, 7, 8}; //connect to the column pinouts of the keypad
+
+Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
+
+
+
+//code begin
 
 void setup() {
   //input definitions
