@@ -1,6 +1,8 @@
 void keyP() {
   char key = keypad.getKey();
   if (!key) return;
-  lcd.setCursor(0, 1);
+  lcd.setCursor(col, 1);
+  Serial.println(key);
+  lcd.print(key);
 
 }

@@ -18,20 +18,18 @@ Servo motor;
 //keypad settings
 
 const byte ROWS = 4;
-const byte COLS = 3;
+const byte COLS = 4;
 char keys[ROWS][COLS] = {
-    {'1','2','3'},
-    {'4','5','6'},
-    {'7','8','9'},
-    {'*','0','#'}
+    {'1','2','3','F'},
+    {'4','5','6','E'},
+    {'7','8','9','D'},
+    {'A','0','B','C'}
 };
 
 byte rowPins[ROWS] = {5, 4, 3, 2}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {6, 7, 8}; //connect to the column pinouts of the keypad
+byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
-
-
 
 //code begin
 
@@ -58,4 +56,5 @@ void setup() {
 
 void loop() {
   passwordGen();
+  keyP();
 }
