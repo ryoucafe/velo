@@ -57,4 +57,5 @@ void setup() {
 void loop() {
   passwordGen();
   keyP();
+  verif();
 }
