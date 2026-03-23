@@ -31,6 +31,8 @@ byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
+
+
 //code begin
 
 void setup() {
@@ -38,8 +40,8 @@ void setup() {
   pinMode(codeBtn, INPUT_PULLUP);
 
   //screen setup
-  lcd.clear();
   lcd.init();
+  lcd.clear();
   lcd.backlight();
   lcd.print("Code: ");
   lcd.setCursor(7, 0);

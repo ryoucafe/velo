@@ -1,8 +1,10 @@
+String pad;
+
 void keyP() {
   char key = keypad.getKey();
   if (!key) return;
-  lcd.setCursor(col, 1);
-  Serial.println(key);
-  lcd.print(key);
-
+  lcd.setCursor(0, 1);
+  pad += key;
+  Serial.println(pad);
+  lcd.print(pad);
 }
