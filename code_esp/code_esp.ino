@@ -31,7 +31,9 @@ byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
-
+char key;
+String code;
+String pad;
 
 //code begin
 

@@ -1,7 +1,5 @@
-String pad;
-
 void keyP() {
-  char key = keypad.getKey();
+  key = keypad.getKey();
   if (!key) return;
   lcd.setCursor(0, 1);
   pad += key;
