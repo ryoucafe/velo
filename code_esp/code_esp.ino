@@ -62,4 +62,5 @@ void loop() {
   passwordGen();
   keyP();
   verif();
+  annul();
 }

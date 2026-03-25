@@ -6,7 +6,6 @@ void verif() {
   }
   else {
     Serial.println("Code mauvais");
-    pad = "";
     lcd.setCursor(0, 1);
   }
 
