@@ -8,7 +8,6 @@ void verif() {
     Serial.println("Code mauvais");
     pad = "";
     lcd.setCursor(0, 1);
-    lcd.print("                ");  // Clear the line
   }
 
 }
