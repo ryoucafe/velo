@@ -1,0 +1,5 @@
+## THIS FOLDER CONTAINS INFORMATIONS POSTED BY THE MEMBERS OF THE GROUP WHO DO NOT HAVE GITHUB AND ARE FOREIN FROM CODING, I will therefore post it for them here.
+# THE DOCUMENTS ARE IN FRENCH
+
+- [ITEC.docx](ITEC.docx) by GABIN (modeling team) about [this solidworks file](../models/rail.SLDPRT)
+
