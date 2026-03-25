@@ -50,13 +50,14 @@ void setup() {
   lcd.setCursor(7, 0);
 
   //servomotor setup
-  motor.attach(11);
+  motor.attach(12);
 
   //serial setup
   Serial.begin(9600);
 
   //random setup
   randomSeed(analogRead(0));
+  motor.write(0);
 }
 
 void loop() {
