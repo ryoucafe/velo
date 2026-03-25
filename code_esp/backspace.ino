@@ -1,10 +1,18 @@
-//TO FIX, DOESNT WORK
+// I FIXED IT (*^▽^*) from: @ryoucafe
 void backspace() {
   
   key = keypad.getKey();
   if (key != 'F') return;
-  lcd.setCursor(0, 1);
+
+  if  (index > 0) {
+
+  index--;
   pad.remove(index, 1); 
+  lcd.setCursor(0, 1);
+  lcd.print("               ");
   Serial.println(pad);
+  lcd.setCursor(0, 1);
   lcd.print(pad);
+
+  }
 }
