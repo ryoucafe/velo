@@ -1,4 +1,4 @@
-// I FIXED IT (*^▽^*) from: @ryoucafe
+/*
 void backspace() {
   
   key = keypad.getKey();
@@ -16,3 +16,5 @@ void backspace() {
 
   }
 }
+*/
+

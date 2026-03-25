@@ -1,4 +1,4 @@
-void verif() {
+/*void verif() {
   if (key != 'B') return;
     
   if (code == pad || key == 'E') {
@@ -16,5 +16,5 @@ void verif() {
   }
 
 }
-
+*/
 //NOTE: need to merge codeAnnul, codeVerif and backspace into the same program named interaction for easier access.
