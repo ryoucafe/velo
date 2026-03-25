@@ -3,3 +3,4 @@
 
 - [ITEC.docx](ITEC.docx) by GABIN (modeling team) about [this solidworks file](../models/rail.SLDPRT)
 
+### to be done: CONVERT MS WORDS (DOCX) FILES TO MARKDOWN FOR FUTURE GITHUB POSTS
