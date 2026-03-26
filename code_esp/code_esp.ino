@@ -36,6 +36,9 @@ String code = " ";
 String pad;
 int index;
 
+int time = 1000;
+byte nchar = 4;
+
 //code begin
 
 void setup() {
