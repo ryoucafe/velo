@@ -6,7 +6,7 @@ void annul() {
 }
 
 void verif() {
-  if (key != 'B' || key!= 'E') return;  //E KEY = DEBUG MODE
+  if (key != 'B' && key!= 'E') return;  //E KEY = DEBUG MODE
     
   if (code == pad || key == 'E') {
     motor.write(0);
