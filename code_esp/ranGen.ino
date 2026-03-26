@@ -1,5 +1,5 @@
 void passwordGen() {
-  if (digitalRead(codeBtn) != LOW) return; //leaves function if button is not pressed
+  if (key != 'C') return; //leaves function if button is not pressed
   code = "";
   lcd.clear();
   lcd.print("Code: ");

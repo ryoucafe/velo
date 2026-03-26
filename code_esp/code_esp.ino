@@ -8,7 +8,6 @@
 #include <Servo.h>
 
 //defining pins
-#define codeBtn 10
 #define buzzer 11
 
 //special parameters
@@ -43,7 +42,6 @@ byte nchar = 4;
 
 void setup() {
   //input definitions
-  pinMode(codeBtn, INPUT_PULLUP);
   pinMode(buzzer, OUTPUT);
 
   //screen setup
