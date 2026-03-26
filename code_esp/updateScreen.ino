@@ -3,7 +3,7 @@ void default_Screen() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Code: ");
-  lcd.setCursor(7, 0);
+  lcd.setCursor(6, 0);
   lcd.print(code);
 
 }

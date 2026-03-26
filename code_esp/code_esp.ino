@@ -48,8 +48,7 @@ void setup() {
   lcd.init();
   lcd.clear();
   lcd.backlight();
-  lcd.print("Code: ");
-  lcd.setCursor(7, 0);
+  default_Screen();
 
   //servomotor setup
   motor.attach(12);

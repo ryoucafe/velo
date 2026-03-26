@@ -3,7 +3,7 @@ void passwordGen() {
   code = "";
   lcd.clear();
   lcd.print("Code: ");
-  lcd.setCursor(7, 0);
+  lcd.setCursor(6, 0);
   for (int i = 0; i<nchar; i++) {   
       code += random(10);
   }
