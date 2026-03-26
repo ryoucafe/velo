@@ -6,7 +6,7 @@ void annul() {
 }
 
 void verif() {
-  if (key != 'B') return;
+  if (key != 'B' || key!= 'E') return;  //E KEY = DEBUG MODE
     
   if (code == pad || key == 'E') {
     motor.write(0);
@@ -44,5 +44,3 @@ void backspace() {
 
   }
 }
-
-//this is a merge of codeannul, codeverif, and backspace.. CURRENTLY DOESNT WORK LEMME FIX
