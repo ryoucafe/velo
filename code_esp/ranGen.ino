@@ -9,5 +9,4 @@ void passwordGen() {
   }
   lcd.print(code);
   motor.write(90);
-  delay(500);
 }

@@ -30,6 +30,7 @@ byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
+
 char key;
 String code = " ";
 String pad;
@@ -49,6 +50,8 @@ void setup() {
   lcd.clear();
   lcd.backlight();
   default_Screen();
+  pad = "";
+  index = 0;
 
   //servomotor setup
   motor.attach(12);
@@ -62,6 +65,8 @@ void setup() {
 }
 
 void loop() {
+  key = keypad.getKey(); 
+
   passwordGen();
   keyP();
   verif();
