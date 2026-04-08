@@ -22,8 +22,8 @@ char keys[ROWS][COLS] = {
     {'A','0','B','C'}
 };
 
-byte rowPins[ROWS] = {32, 33, 25, 26}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {13, 14, 15, 16}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {14, 13, 15, 16}; // ESP32 pins connected to keypad ROW wires
+byte colPins[COLS] = {32, 33, 25, 26}; // ESP32 pins connected to keypad COL wires
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
@@ -31,9 +31,9 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 char key;
 String code = " ";
 String pad;
-int index;
+int padIndex;
 
-int time = 1000;
+int delayMs = 1000;
 byte nchar = 4;
 
 //code begin
@@ -48,17 +48,18 @@ void setup() {
   lcd.backlight();
   default_Screen();
   pad = "";
-  index = 0;
+  padIndex = 0;
 
   //servomotor setup
-  motor.attach(23);
+  motor.setPeriodHertz(50);
+  motor.attach(23, 500, 2400);
+  motor.write(0);
 
   //serial setup
   Serial.begin(9600);
 
   //random setup
-  randomSeed(analogRead(0));
-  motor.write(0);
+  randomSeed(analogRead(34));
 }
 
 void loop() {
@@ -70,3 +71,8 @@ void loop() {
   annul();
   backspace();
 }
+
+
+
+
+

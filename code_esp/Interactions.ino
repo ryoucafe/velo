@@ -1,7 +1,7 @@
 void annul() {
   if (key != 'A') return;
   pad = "";
-  index = 0;
+  padIndex = 0;
   lcd.setCursor(0, 1);
   lcd.println("                 ");
 }
@@ -12,19 +12,19 @@ void verif() {
   if (code == pad || key == 'E') {
     motor.write(0);
     Correct_Screen();
-    delay(time);
+    delay(delayMs);
     code = " ";
     default_Screen();
     pad = "";
-    index = 0;
+    padIndex = 0;
   }
   else {
 
     Incorrect_Screen();
-    delay(time);
+    delay(delayMs);
     default_Screen();
     pad = "";
-    index = 0;
+    padIndex = 0;
 
   }
 
@@ -34,10 +34,10 @@ void backspace() {
   
   if (key != 'F') return;
 
-  if  (index > 0) {
+  if  (padIndex > 0) {
 
-  index--;
-  pad.remove(index, 1); 
+  padIndex--;
+  pad.remove(padIndex, 1); 
   lcd.setCursor(6, 1);
   lcd.print("               ");
   lcd.setCursor(6, 1);
