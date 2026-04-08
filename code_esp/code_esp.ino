@@ -5,10 +5,7 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-#include <Servo.h>
-
-//defining pins
-#define buzzer 11
+#include <ESP32Servo.h>
 
 //special parameters
 LiquidCrystal_I2C lcd(0x27, 16, 2);
@@ -25,8 +22,8 @@ char keys[ROWS][COLS] = {
     {'A','0','B','C'}
 };
 
-byte rowPins[ROWS] = {5, 4, 3, 2}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {32, 33, 25, 26}; //connect to the row pinouts of the keypad
+byte colPins[COLS] = {13, 14, 15, 16}; //connect to the column pinouts of the keypad
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
@@ -43,7 +40,6 @@ byte nchar = 4;
 
 void setup() {
   //input definitions
-  pinMode(buzzer, OUTPUT);
 
   //screen setup
   lcd.init();
@@ -54,7 +50,7 @@ void setup() {
   index = 0;
 
   //servomotor setup
-  motor.attach(12);
+  motor.attach(23);
 
   //serial setup
   Serial.begin(9600);

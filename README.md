@@ -12,12 +12,12 @@ This project tackles urban bike parking challenges by creating an intelligent tw
 
 - **User-Friendly Interface:** Touch-based code entry kiosk system
 - **Automated Locking:** Servo motor-controlled secure locks
-- **IoT Connectivity:** ESP32 microcontroller with WiFi capabilities (currently using Arduino Uno)
+- **IoT Connectivity:** ESP32 microcontroller with WiFi capabilities
 - **Real-Time Feedback:** 16x2 LCD display for user interaction as well as a website to access the status of the bike parking (UNFINISHED)
 
 ## Technical Stack
 
-- **Microcontroller:** Arduino Uno (current), ESP32 (planned)
+- **Microcontroller:** Arduino Uno (OLD), ESP32 (CURRENT)
 - **Programming Language:** C++ (Arduino/embedded)
 - **Hardware Components:**
   - Servo motor for lock control
@@ -68,11 +68,11 @@ This project tackles urban bike parking challenges by creating an intelligent tw
 - [x] LCD display management
 - [x] Code generation & verification logic
 - [x] Servo motor control
-- [ ] Multi-level elevator mechanics
-- [ ] Pulley system integration
-- [ ] ESP32 migration & wireless connectivity
+- [X] ESP32 migration & wireless connectivity
 - [ ] Website interface
 - [ ] Cloud backend integration
+- [ ] Multi-level elevator mechanics
+- [ ] Pulley system integration
 
 ## Future Enhancements
 
@@ -81,10 +81,6 @@ This project tackles urban bike parking challenges by creating an intelligent tw
 - Real-time parking availability tracking
 - Multi-site management system
 
-
-## Contributing
-
-This is a school project. Contributions from team members only.
 
 ## Contact
 
