@@ -15,9 +15,7 @@ void Incorrect_Screen() {
   lcd.print("Code");
   lcd.setCursor(4, 1);
   lcd.print("Invalide");
-  tone(buzzer, 1000);
   delay(1500);
-  tone(buzzer, 0);
 
 }
 

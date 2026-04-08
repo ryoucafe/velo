@@ -39,8 +39,9 @@ byte nchar = 4;
 //code begin
 
 void setup() {
-  //input definitions
 
+  Wire.begin(21, 22); 
+  
   //screen setup
   lcd.init();
   lcd.clear();
