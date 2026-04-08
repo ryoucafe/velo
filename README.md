@@ -23,7 +23,6 @@ This project tackles urban bike parking challenges by creating an intelligent tw
   - Servo motor for lock control
   - 4x4 Keypad for code entry
   - 16x2 LCD Display (I2C interface)
-  - Buzzer for audio feedback
   - Lifting mechanism (under development)
 
 ## How It Works
@@ -32,7 +31,6 @@ This project tackles urban bike parking challenges by creating an intelligent tw
 2. **Verification:** System generates a random code and validates the entry
 3. **Access Control:** Upon correct code, servo motor unlocks the storage unit
 4. **Feedback:** LCD display provides real-time feedback (success/error messages)
-5. **Audio Alert:** Buzzer confirms invalid attempts
 
 ### Key Functions
 - **`passwordGen()`** - Generates random security codes
@@ -79,15 +77,10 @@ This project tackles urban bike parking challenges by creating an intelligent tw
 ## Future Enhancements
 
 - IoT integration for remote monitoring
-- Mobile app for code generation and access
+- Mobile app for code generation and access (Maybe)
 - Real-time parking availability tracking
-- User authentication system
-- Analytics dashboard for usage patterns
 - Multi-site management system
 
-## License
-
-This is an educational student project for the Terminale STI2D program.
 
 ## Contributing
 
