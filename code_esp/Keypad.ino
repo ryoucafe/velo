@@ -3,5 +3,5 @@ void keyP() {
   lcd.setCursor(6, 1);
   pad += key;
   padIndex = pad.length();
-  lcd.print(pad);
+  lcd.print("*");
 }

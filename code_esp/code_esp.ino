@@ -34,7 +34,7 @@ String pad;
 int padIndex;
 
 int delayMs = 1000;
-byte nchar = 4;
+byte nchar = 6;
 
 //code begin
 
