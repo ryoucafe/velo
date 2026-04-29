@@ -27,35 +27,43 @@ void Correct_Screen() {
   
 }
 */
-
-void default_Screen() {
-
+void start_Screen() {
   lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Bienvenu");
+  lcd.setCursor(4, 0);
+  lcd.print("Bienvenue");
   delay(1000);
   lcd.clear();
+  //screen = 0;  
+}
+
+void default_Screen() {
   lcd.print("A. Deverouiller");
   lcd.setCursor(0, 1);
   lcd.print("B. Verouiller");
+  //screen = 1;
+}
 
+void unlock_Screen() {
+  lcd.print("Code:");
+  lcd.setCursor(6, 0);
+  lcd.setCursor(0, 1);
+  lcd.print("B. Valider");
+  //screen = 2;
 }
 
 void Incorrect_Screen() {
-
   lcd.clear();
   lcd.setCursor(3, 0);
-  lcd.print("Code Erroné");
+  lcd.print("Code Errone");
   lcd.setCursor(0, 1);
   lcd.print("Oubli:0612345678");
   delay(1500);
-
 }
 
 void Correct_Screen() {
   lcd.clear();
   lcd.setCursor(4, 0);
   lcd.print("Code Bon");
-  lcd.setCursor(2, 0);
-  lcd.print("Bonne Journée");
+  lcd.setCursor(1, 1);
+  lcd.print("Bonne Journee");
 }
