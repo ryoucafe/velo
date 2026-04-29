@@ -32,6 +32,7 @@ char key;
 String code = " ";
 String pad;
 int padIndex;
+int screen = 0;
 
 int delayMs = 1000;
 byte nchar = 6;
