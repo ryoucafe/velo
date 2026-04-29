@@ -51,6 +51,15 @@ void unlock_Screen() {
   screen = 2;
 }
 
+void lock_Screen() {
+  lcd.clear();
+  lcd.print("Code:");
+  lcd.setCursor(6, 0);
+  lcd.setCursor(0, 1);
+  lcd.print("A. Retour Menu");
+  screen = 2;
+}
+
 void Incorrect_Screen() {
   lcd.clear();
   lcd.setCursor(3, 0);
