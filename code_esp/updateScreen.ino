@@ -31,12 +31,11 @@ void start_Screen() {
   lcd.clear();
   lcd.setCursor(4, 0);
   lcd.print("Bienvenue");
-  delay(1000);
-  lcd.clear();
   screen = 0;  
 }
 
 void default_Screen() {
+  lcd.clear();
   lcd.print("A. Deverouiller");
   lcd.setCursor(0, 1);
   lcd.print("B. Verouiller");
@@ -44,6 +43,7 @@ void default_Screen() {
 }
 
 void unlock_Screen() {
+  lcd.clear();
   lcd.print("Code:");
   lcd.setCursor(6, 0);
   lcd.setCursor(0, 1);
