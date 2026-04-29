@@ -33,14 +33,14 @@ void start_Screen() {
   lcd.print("Bienvenue");
   delay(1000);
   lcd.clear();
-  //screen = 0;  
+  screen = 0;  
 }
 
 void default_Screen() {
   lcd.print("A. Deverouiller");
   lcd.setCursor(0, 1);
   lcd.print("B. Verouiller");
-  //screen = 1;
+  screen = 1;
 }
 
 void unlock_Screen() {
@@ -48,7 +48,7 @@ void unlock_Screen() {
   lcd.setCursor(6, 0);
   lcd.setCursor(0, 1);
   lcd.print("B. Valider");
-  //screen = 2;
+  screen = 2;
 }
 
 void Incorrect_Screen() {
