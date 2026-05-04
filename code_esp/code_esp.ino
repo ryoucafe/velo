@@ -37,6 +37,9 @@ int screen = 0;
 int delayMs = 1000;
 byte nchar = 6;
 
+unsigned long lastActivity = 0;
+const unsigned long idleTimeout = 10000UL; // 10 seconds
+
 //code begin
 
 void setup() {
@@ -61,10 +64,13 @@ void setup() {
 
   //random setup
   randomSeed(analogRead(34));
+
+  lastActivity = millis();
 }
 
 void loop() {
   key = keypad.getKey(); 
+  if (key) lastActivity = millis();
 
   //passwordGen();
   keyP();
@@ -72,6 +78,14 @@ void loop() {
   //annul();
   //backspace();
   handleKeys();
+
+  if (millis() - lastActivity > idleTimeout && screen != 0) {
+  start_Screen();
+  pad = "";
+  padIndex = 0;
+  key = 0;
+  lastActivity = millis(); // avoid repeating the timeout immediately
+}
 }
 
 
