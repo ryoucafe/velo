@@ -47,7 +47,7 @@ void setup() {
   lcd.init();
   lcd.clear();
   lcd.backlight();
-  default_Screen();
+  //default_Screen();
   pad = "";
   padIndex = 0;
 
@@ -66,11 +66,12 @@ void setup() {
 void loop() {
   key = keypad.getKey(); 
 
-  passwordGen();
+  //passwordGen();
   keyP();
-  verif();
-  annul();
-  backspace();
+  //verif();
+  //annul();
+  //backspace();
+  handleKeys();
 }
 
 
